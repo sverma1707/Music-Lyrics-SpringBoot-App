@@ -1,0 +1,155 @@
+/* base.html */
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+background: #363434;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*Header*/
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252A;
+    /* position: fixed; */
+    width: 100%;
+}
+
+#official{
+    color:white;
+    cursor: pointer;
+    font-family: "StoryElement","BeautifulPeople","Montserrat", sans-serif;
+    font-weight: 1000;
+    font-size:xx-large;
+    font-style: inherit;
+
+}
+
+
+/*navbar*/
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding:0px 10px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:#edf0f1;
+    text-decoration: none;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:#edf0f1;
+    text-decoration: none;
+}
+
+.nav__links li a:hover{
+    color:orange;
+}
+
+
+
+
+/* main body*/
+.pad-3{
+    /* padding-top:1vh; */
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-bottom: 0.5vh;
+}
+
+.pad-top-4{
+    padding-top:4vh;
+}
+
+.pad-top-6{
+    padding-top:6vh;
+}
+
+.marg-top-3{
+    margin-top: 3vh;
+}
+
+.marg-top-4{
+    margin-top: 4vh;
+}
+
+.marg-top-6{
+    margin-top: 6vh;
+}
+
+.marg-top-8{
+    margin-top: 8vh;
+}
+
+
+.shadow-border{
+    border-radius: 15px;
+}
+
+
+/*highlighter*/
+.highlighter1{
+    padding:5px
+    ;width:100%;
+    background-image: linear-gradient(to right, #fa0758 0%,#1dbdee 100%);
+}
+
+.highlighter2{
+    padding:5px
+    ;width:100%;
+    background-image: linear-gradient(to right, #1dbdee 0%,#fa0758 100%);
+}
+
+
+
+/*Main body*/
+main{
+    padding-bottom:6vh;
+    /* background-color: rgba(43, 45, 53,1); */
+    background-color: rgb(255, 255, 255);
+    min-height: 90vh;
+}
+
+footer{
+    padding:3vh ;
+    background-color: rgb(37, 38, 41);
+}
+
+.copyright{
+    color: white;
+    text-align:center;
+}
+
+#footer-font{
+    font-family: "StoryElement","BeautifulPeople","Montserrat", sans-serif;
+}

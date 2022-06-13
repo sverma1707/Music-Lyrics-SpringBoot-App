@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> YSPM Ministries </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid" style="padding:20px;">
+        <span id="official"><img th:src="@{/assets/composing.png}" height="50" width="50">&nbsp; &nbsp;Song Lyrics App </span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<!---------------------------------Highlighter-------------------------------------->
+<div class="highlighter1"></div>
+<!---------------------------------Footer-------------------------------------->
+
+<div class="song_list">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="row songContainer" th:each="lyric : ${songLyric}">
+                <img th:src="@{/assets/song-lyrics.png}" height="30" width="30">
+                <h2 th:text="${lyric.title}" style="margin-bottom:6vh;"></h2>
+                <pre th:text="${lyric.songlyric}" style="font-size:15px;"></pre>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <a class="btn btn-success" th:href="@{/songs/}" style="background-color:#00008B">Home</a>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+
+
+<!--                <div class="col-md-2">-->
+<!--                    <img th:src="@{/assets/song-lyrics.png}" height="30" width="30">-->
+<!--                </div>-->
+<!--                <div class="col-md-8 lyricContainer" th:text="${lyric.title}" style="font-size:20px;">-->
+<!--                </div>-->
+<!--                <div class="col-md-2">-->
+<!--                    <button class="btn btn-primary" href="@{/songs/${lyric.id}}">View</button>-->
+<!--                </div>-->
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<!---------------------------------Highlighter-------------------------------------->
+<div class="highlighter2"></div>
+<!---------------------------------Footer-------------------------------------->
+<footer>
+    <div class="container">
+        <div class="copyright">
+            Copyright © 2022. All Rights Reserved by <span id="footer-font"> &nbsp; <img th:src="@{/assets/composing.png}" height="30" width="30"> Song-Lyrics-App</span>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
