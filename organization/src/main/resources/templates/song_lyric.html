@@ -22,8 +22,12 @@
                 <li> <a href="https://www.facebook.com/ramesh.manepalli.560/" title="hyperlink" target="new"><img th:src="@{/assets/facebook.png}" height="50" width="50" alt="Facebook"></a></li>
                 <li> <a href="https://www.instagram.com/ramesh_naidu.official/" title="hyperlink" target="new"><img th:src="@{/assets/instagram.png}" height="50" width="50" alt="Instagram"></a></li>
                 <li> <a href="https://github.com/rameshmanepalli1234" title="hyperlink" target="new"><img th:src="@{/assets/customer-service.png}" height="50" width="50" alt="Contact Us"></a></li>
+                <li><a class="btn btn-success" th:href="@{/save/}" style="background-color:#00008B">Home</a></li>
+                <li><a class="btn btn-success" th:href="@{/save/}" style="background-color:#00008B">Search Bar</a></li>
             </ol>
         </div>
+
+
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,74 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
-<!--            <form action="#" th:action="@{/searches}" th:object="${songs}" method="post">-->
-<!--                <form action="#" >-->
-<!--                <div alight="left" style ="display:flex !important">-->
-<!--                    <label class="form-label" >Song ID</label>-->
-<!--&lt;!&ndash;                    <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" />&ndash;&gt;-->
-<!--                    <input type="text"  class="form-control" placeholder="Song ID" />-->
-<!--                </div>-->
-<!--                <button type="submit" style ="width:110px" class="btn btn-info">Search</button>-->
-<!--                <br>-->
 
-<!--                <div alight="left">-->
-<!--                    <label class="form-label" >Song Lyric</label>-->
-                    <!--                        <h1> th:field="${song.songlyric}" class="form-control" placeholder="Song Lyric" <h1>-->
-
-                    <!--                            <div class="col-md-8 lyricContainer" th:text="${song.songlyric}"  style="font-size:20px;">-->
-                    <!--                            </div>-->
                 </div>
             </form>
         </div>
     </div>
 </nav>
-
-<!--<nav class="navbar navbar-expand-lg bg-dark">-->
-<!--    <div class="container-fluid" style="padding:20px;">-->
-<!--        <span id="official"><img th:src="@{/assets/composing.png}" height="50" width="50">&nbsp; &nbsp;Song Lyrics App </span>-->
-<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
-<!--            </ul>-->
-<!--            <form action="#" th:action="@{/search}" th:object="${song}" method="post">-->
-<!--                <div alight="left">-->
-<!--                    <label class="form-label" >Song ID</label>-->
-<!--                    <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" />-->
-<!--                </div>-->
-<!--                <button type="submit" class="btn btn-info">Search</button>-->
-<!--                <br>-->
-
-<!--                <div alight="left">-->
-<!--                    <label class="form-label" >Song Lyric</label>-->
-<!--                    &lt;!&ndash;                        <h1> th:field="${song.songlyric}" class="form-control" placeholder="Song Lyric" <h1>&ndash;&gt;-->
-
-<!--                    &lt;!&ndash;                            <div class="col-md-8 lyricContainer" th:text="${song.songlyric}"  style="font-size:20px;">&ndash;&gt;-->
-<!--                    &lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-
-<!--<nav class="navbar navbar-expand-lg bg-dark">-->
-<!--    <div class="container-fluid" style="padding:20px;">-->
-<!--        <span id="official"><img th:src="@{/assets/composing.png}" height="50" width="50">&nbsp; &nbsp;Song Lyrics App </span>-->
-<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
-<!--            </ul>-->
-<!--            <form action="#" th:action="@{/searches}" th:object="${songLyricLists}" method="post" class="d-flex" role="search">-->
-<!--                <input class="form-control me-2" placeholder="Search" aria-label="Search">-->
-<!--                <button class="btn btn-outlinesuccess" type="submit">Search</button>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-
 
 <!---------------------------------Highlighter-------------------------------------->
 <div class="highlighter1"></div>
@@ -136,6 +78,7 @@
     <div class="container">
         <div class="copyright">
             Copyright © 2022. All Rights Reserved by <span id="footer-font"> &nbsp; <img th:src="@{/assets/composing.png}" height="30" width="30"> Song-Lyrics-App</span>
+
         </div>
     </div>
 </footer>

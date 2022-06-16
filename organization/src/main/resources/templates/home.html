@@ -92,10 +92,13 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="row songContainer" th:each="lyric : ${songLyricLists}">
+
+                <div class="col-md-2 lyricContainer" th:text="${lyric.id}" >
+                </div>
                 <div class="col-md-2">
                     <img th:src="@{/assets/song-lyrics.png}" height="30" width="30">
                 </div>
-                <div class="col-md-8 lyricContainer" th:text="${lyric.title}"  style="font-size:20px;">
+                <div class="col-md-6 lyricContainer" th:text="${lyric.title}"  style="font-size:20px;">
                 </div>
                 <div class="col-md-2">
                     <a class="btn btn-primary" th:href="@{/songs/} + ${lyric.getId()}">View</a>
