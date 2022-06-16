@@ -20,9 +20,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <form action="#" th:action="@{/search}" th:object="${song}" method="post">
+                <div alight="left">
+                    <label class="form-label" >Song ID</label>
+                    <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" />
+                </div>
+                colspan="2"><button type="submit" class="btn btn-info">Search</button>
+                <br>
+
+                <div alight="left">
+                    <label class="form-label" >Song Lyric</label>
+                    <!--                        <h1> th:field="${song.songlyric}" class="form-control" placeholder="Song Lyric" <h1>-->
+
+                    <!--                            <div class="col-md-8 lyricContainer" th:text="${song.songlyric}"  style="font-size:20px;">-->
+                    <!--                            </div>-->
+                </div>
             </form>
         </div>
     </div>
@@ -32,6 +44,7 @@
 <!---------------------------------Highlighter-------------------------------------->
 <div class="highlighter1"></div>
 <!---------------------------------Footer-------------------------------------->
+
 
 <div class="song_list">
     <div class="row">
@@ -44,7 +57,7 @@
                 <div class="row">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
-                        <a class="btn btn-success" th:href="@{/songs/}" style="background-color:#00008B">Home</a>
+                        <a class="btn btn-success" th:href="@{/save/}" style="background-color:#00008B">Home</a>
                     </div>
                     <div class="col-md-3"></div>
                 </div>

@@ -17,12 +17,8 @@
 
         <form action="#" th:action="@{/search}" th:object="${song}" method="post">
             <div alight="left">
-                <tr>
                     <label class="form-label" >Song ID</label>
-                    <td>
                         <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" />
-                    </td>
-                </tr>
             </div>
 
             <br>
