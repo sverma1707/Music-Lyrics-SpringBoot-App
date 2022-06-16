@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid" style="padding:20px;">
         <span id="official"><img th:src="@{/assets/composing.png}" height="50" width="50">&nbsp; &nbsp;Song Lyrics App </span>
@@ -20,18 +21,80 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
-            <form action="#" th:action="@{/searches}" th:object="${songLyricLists}" method="post" class="d-flex" role="search">
-                <input class="form-control me-2" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outlinesuccess" type="submit">Search</button>
+<!--            <form action="#" th:action="@{/searches}" th:object="${songs}" method="post">-->
+                <form action="#" >
+                <div alight="left">
+                    <label class="form-label" >Song ID</label>
+<!--                    <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" />-->
+                    <input type="text"  class="form-control" placeholder="Song ID" />
+                </div>
+                <button type="submit" class="btn btn-info">Search</button>
+                <br>
+
+                <div alight="left">
+                    <label class="form-label" >Song Lyric</label>
+                    <!--                        <h1> th:field="${song.songlyric}" class="form-control" placeholder="Song Lyric" <h1>-->
+
+                    <!--                            <div class="col-md-8 lyricContainer" th:text="${song.songlyric}"  style="font-size:20px;">-->
+                    <!--                            </div>-->
+                </div>
             </form>
         </div>
     </div>
 </nav>
 
+<!--<nav class="navbar navbar-expand-lg bg-dark">-->
+<!--    <div class="container-fluid" style="padding:20px;">-->
+<!--        <span id="official"><img th:src="@{/assets/composing.png}" height="50" width="50">&nbsp; &nbsp;Song Lyrics App </span>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--            </ul>-->
+<!--            <form action="#" th:action="@{/search}" th:object="${song}" method="post">-->
+<!--                <div alight="left">-->
+<!--                    <label class="form-label" >Song ID</label>-->
+<!--                    <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" />-->
+<!--                </div>-->
+<!--                <button type="submit" class="btn btn-info">Search</button>-->
+<!--                <br>-->
+
+<!--                <div alight="left">-->
+<!--                    <label class="form-label" >Song Lyric</label>-->
+<!--                    &lt;!&ndash;                        <h1> th:field="${song.songlyric}" class="form-control" placeholder="Song Lyric" <h1>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash;                            <div class="col-md-8 lyricContainer" th:text="${song.songlyric}"  style="font-size:20px;">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<nav class="navbar navbar-expand-lg bg-dark">-->
+<!--    <div class="container-fluid" style="padding:20px;">-->
+<!--        <span id="official"><img th:src="@{/assets/composing.png}" height="50" width="50">&nbsp; &nbsp;Song Lyrics App </span>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--            </ul>-->
+<!--            <form action="#" th:action="@{/searches}" th:object="${songLyricLists}" method="post" class="d-flex" role="search">-->
+<!--                <input class="form-control me-2" placeholder="Search" aria-label="Search">-->
+<!--                <button class="btn btn-outlinesuccess" type="submit">Search</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
 
 <!---------------------------------Highlighter-------------------------------------->
 <div class="highlighter1"></div>
 <!---------------------------------Footer-------------------------------------->
+
+<!--<div class="col-md-8 lyricContainer" th:text="${songs.songlyric}"  style="font-size:20px;">-->
 
 
 <div class="song_list">

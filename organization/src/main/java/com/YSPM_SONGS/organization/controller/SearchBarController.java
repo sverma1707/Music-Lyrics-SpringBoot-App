@@ -5,51 +5,36 @@ import com.YSPM_SONGS.organization.service.impl.SongLyricService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
 @Controller
-public class SongLyricController {
+public class SearchBarController {
 
     @Autowired
     private SongLyricService songLyricService;
 
-//    @GetMapping("/songs")
-//    public String home(Model model) {
-//        List<SongLyric> songLyricList = songLyricService.getAllSongs();
-//        model.addAttribute("songLyricLists", songLyricList);
-//        return "home";
-//    }
-
-    @GetMapping("/songs/{id}")
-    public String getSongs(Model model,@PathVariable("id") Integer songID){
-        SongLyric lyric = songLyricService.getSongsById(songID);
-        model.addAttribute("songLyric", lyric);
-        return "song_lyric";
-    }
-
-
-    @GetMapping("/save")
+    @GetMapping("/saved")
     public String add(Model model) {
         List<SongLyric> songLyricList = songLyricService.getAllSongs();
         model.addAttribute("songLyricLists", songLyricList);
         List<SongLyric> listSongs = songLyricService.getAllSongs();
-        model.addAttribute("song", new SongLyric());
+        model.addAttribute("songs", new SongLyric());
 //        List<SongLyric> listout = songLyricService.getAllSongs();
 //        model.addAttribute("songss", new SongLyric());
 
-        return "home";
+        return "song_lyric";
     }
 
 
-    @PostMapping("/search")
+    @PostMapping("/searches")
     public String doSearchEmployee(@ModelAttribute("employeeSearchFormData") SongLyric formData, Model model) {
         SongLyric emp = songLyricService.getSongsById(formData.getId());
-        model.addAttribute("song", emp);
-        return "home";
+        model.addAttribute("songs", emp);
+        return "song_lyric";
     }
 
-
 }
-
