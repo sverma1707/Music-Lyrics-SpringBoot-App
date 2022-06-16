@@ -12,5 +12,4 @@ public interface SongLyricService {
 
     SongLyric getSongsById(Integer id);
 
-//    Integer getSongByString(String search);
 }

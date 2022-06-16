@@ -24,9 +24,4 @@ public class SongLyricServiceImpl implements SongLyricService {
         return songLyricRepository.findById(id).get();
     }
 
-//    @Override
-//    public Integer getSongByString(String search) {
-//        List<SongLyric> allSongs = songLyricRepository.findAll();
-//        return 0;
-//    }
 }
