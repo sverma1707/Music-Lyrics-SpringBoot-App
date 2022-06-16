@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="songlyrics")
 public class SongLyric {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

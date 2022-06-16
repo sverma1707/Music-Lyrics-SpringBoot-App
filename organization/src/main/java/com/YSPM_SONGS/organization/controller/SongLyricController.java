@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-class Query{
-    public String queryName;
-}
-
 @Controller
 public class SongLyricController {
 
