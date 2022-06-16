@@ -29,5 +29,20 @@ public class SongLyricController {
         return "song_lyric";
     }
 
+
+    @GetMapping("/save")
+    public String add(Model model) {
+        List<SongLyric> listSongs = songLyricService.getAllSongs();
+        model.addAttribute("song", new SongLyric());
+        return "index";
+    }
+
+    @PostMapping("/search")
+    public String doSearchEmployee(@ModelAttribute("employeeSearchFormData") SongLyric formData, Model model) {
+        SongLyric emp = songLyricService.getSongsById(formData.getId());
+        model.addAttribute("song", emp);
+        return "index";
+    }
+
 }
 
