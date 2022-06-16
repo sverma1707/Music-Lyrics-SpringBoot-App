@@ -12,8 +12,19 @@
 <body>
 
 <nav class="navbar navbar-expand-lg bg-dark">
-    <div class="container-fluid" style="padding:20px;">
+    <div class="container-fluid" style="padding:25px;">
         <span id="official"><img th:src="@{/assets/composing.png}" height="50" width="50">&nbsp; &nbsp;Song Lyrics App </span>
+
+        <div class="orderedlist">
+            <ol>
+                <li><a href="https://www.linkedin.com/in/ramesh-manepalli-48092721b/" title="hyperlink" target="new"><img th:src="@{/assets/linkedin.png}" height="50" width="50" alt="LinkedIn"></a></li>
+                <li> <a href="https://www.facebook.com/ramesh.manepalli.560/" title="hyperlink" target="new"> <img th:src="@{/assets/facebook.png}" height="50" width="50" alt="FaceBook"> </a></li>
+                <li> <a href="https://www.instagram.com/ramesh_naidu.official/" title="hyperlink" target="new"> <img th:src="@{/assets/instagram.png}" height="50" width="50" alt="Instagram"></a></li>
+                <li> <a href="https://github.com/rameshmanepalli1234" title="hyperlink" target="new"><img th:src="@{/assets/customer-service.png}" height="50" width="50" alt="Contact Us"></a></li>
+            </ol>
+        </div>
+
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,20 +32,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
             <form action="#" th:action="@{/search}" th:object="${song}" method="post">
-                <div alight="left">
-                        <label class="form-label" >Song ID</label>
-                            <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" />
-                </div>
-                    <button type="submit" class="btn btn-info">Search</button>
-                <br>
+                <div alight="left" style ="display:flex !important">
+<!--                        <label class="form-label" >Song ID</label>-->
+                            <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" style="text-align:center; height:50px;"/>
+                    <button type="submit" style ="width:110px" class="btn btn-info">Search</button>
 
-                <div alight="left">
-                        <label class="form-label" >Song Lyric</label>
-<!--                        <h1> th:field="${song.songlyric}" class="form-control" placeholder="Song Lyric" <h1>-->
-
-<!--                            <div class="col-md-8 lyricContainer" th:text="${song.songlyric}"  style="font-size:20px;">-->
-<!--                            </div>-->
                 </div>
+
             </form>
         </div>
     </div>
@@ -62,7 +66,8 @@
 <!--    </div>-->
 <!--</div>-->
 
-<div class="col-md-8 lyricContainer" th:text="${song.songlyric}"  style="font-size:20px;">
+<div class="col-md-8 lyricContainer"  style="font-size:20px;">
+    <pre th:text="${song.songlyric}"> </pre>
 </div>
 
 

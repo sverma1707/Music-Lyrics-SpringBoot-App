@@ -118,3 +118,18 @@ background: radial-gradient(
 .lyricContainer{
 
 }
+
+
+.orderedlist li a{
+  text-decoration:none;
+   display:block;
+   line-height:40px;
+   color:white;
+   float:left;
+   font-size: 30px;
+   }
+
+   .orderedlist li{
+   float:left;
+   margin-right:30px;
+   }
