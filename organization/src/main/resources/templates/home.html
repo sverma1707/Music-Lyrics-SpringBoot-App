@@ -34,7 +34,7 @@
             <form action="#" th:action="@{/search}" th:object="${song}" method="post">
                 <div alight="left" style ="display:flex !important">
 <!--                        <label class="form-label" >Song ID</label>-->
-                            <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" style="text-align:center; height:50px;"/>
+                            <input type="text" th:field="*{id}" class="form-control" placeholder="Song ID" style="text-align:center; height:50px;" required/>
                     <button type="submit" style ="width:110px" class="btn btn-info">Search</button>
 
                 </div>
@@ -65,9 +65,17 @@
 <!--        <div class="col-md-2"></div>-->
 <!--    </div>-->
 <!--</div>-->
+<div style="width:100%; text-align:center;">
+    <br>
+    <br>
+<div class="col-md-8 lyricContainer"  style="font-size:25px; width:100%; text-align:center;">
 
-<div class="col-md-8 lyricContainer"  style="font-size:20px;">
+    <div th:text="${song.title}" style="font-size:30px; font-weight:bold; width:100%; text-align:center;">
+
+    </div>
+    <br>
     <pre th:text="${song.songlyric}"> </pre>
+</div>
 </div>
 
 
